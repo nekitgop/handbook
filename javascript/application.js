@@ -4,10 +4,6 @@
     var countryServiceUrl = 'http://localhost:8080/services/reference/country/getList.do',
         cityServiceUrl = 'http://localhost:8080/services/reference/city/getList.do';
 
-/*    var countryServiceUrl = 'test.php',
-        cityServiceUrl = 'citiestest.php';*/
-
-
     $(function () {
         var countries = new Service({
             url:countryServiceUrl,
@@ -31,7 +27,7 @@
                             params:{country:country.name},
                             onComplete:function (cities) {
                                 cities.sort(display.sortByName);
-                                display.citiesIterator(cities)
+                                display.citiesInit(cities)
                             }
                         });
 
@@ -49,9 +45,9 @@
 
                 });
 
-                display.options.data.sort(display.sortByName)
-                display.columnIterator();
-                display.countryIterator();
+                display.options.data.sort(display.sortByName);
+                display.columnInit();
+                display.countryInit();
             }
         });
         countries.getList();
@@ -69,25 +65,25 @@
     }
 
     Display.prototype = {
-        columnIterator:function () {
+        columnInit:function () {
             if (this.options.eachColumn) this.options.eachColumn(this);
 
         },
-        countryIterator:function () {
+        countryInit:function () {
             if (this.stack >= this.columnsStack) {
                 this.stack = 0;
-                this.columnIterator();
+                this.columnInit();
             }
             this.options.eachCountry(this.options.data[this.dataCounter]);
             this.dataCounter++;
             this.stack++
 
         },
-        citiesIterator:function (cities) {
+        citiesInit:function (cities) {
             for (var i = 0; i < cities.length; i++) {
                 this.options.eachCities(cities[i])
             }
-            this.dataCounter < this.options.data.length ? this.countryIterator() : true
+            this.dataCounter < this.options.data.length ? this.countryInit() : true
 
         },
         insertExisting:function () {
@@ -136,14 +132,18 @@
             })
         },
         onerror:function (error) {
-            return true
+            // throw console message
+            // and
+            // try to continue
+            this.onComplete(this.list)
         },
         onsuccess:function (data) {
             var jsonObj = $.parseJSON(data);
             if (jsonObj && jsonObj instanceof Object) {
                 this.list = this.list.concat(jsonObj.list);
             } else {
-                this.onComplete(this.list);
+                this.pageCount.current++;
+                this.getList()
             }
 
             if (jsonObj.pagesCount) {
