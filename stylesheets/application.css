@@ -1,0 +1,56 @@
+﻿html {margin: 0; width: 100%; overflow-y: scroll;}
+body {margin: 0 auto 0 auto; width: 980px; overflow: visible;}
+html, body {padding: 0; background: #fff;}
+html.empty, body.empty {width: auto; overflow: hidden;}
+form, dl, dt, dd, ul, ol, div {margin: 0; padding: 0;}
+p {margin: 0; padding: 0 0 8px;}
+ol, ul {list-style-image: none; list-style-type: none; list-style-position: outside;}
+ol li {padding-bottom: 5px;}
+ol {list-style-type: decimal; margin-bottom: 1.2em; padding-left: 35px;}
+body, td, pre, input, select, textarea {font: normal 11px Tahoma, Helvetica, Arial, sans-serif; color: #434647; text-align: left;}
+a {color: #0063b3; text-decoration: underline; outline: 0;}
+img {display: block; border: 0;}
+table {border: 0; border-collapse: collapse; border-spacing: 0;}
+h1 {color: #434647; font-weight: normal; font-size: 48px; padding: 8px 0 4px; margin: 0 0 20px; height: 58px; clear: both;}
+h2 {width: 80%; color: #005da8; font-weight: normal; font-size: 19px; padding: 0 0 21px; margin: -10px 0 0; clear: both;}
+h3 {font-size: 18px; color: #434647; font-weight: bold; padding: 34px 0 10px; margin: 0px; clear: both; height: 22px;}
+h3 span {font-weight: normal;}
+h4 {font-size: 18px; color: #434647; font-weight: bold; padding: 13px 0 10px; margin: 0px; clear: both;}
+acronym {cursor: help;}
+h5 {clear: both; color: #434647; font-size: 14px; font-weight: normal; margin: 0; padding: 9px 0 10px;}
+h6 {color: #434647; font-size: 12px; font-weight: bold; margin: 0; padding: 9px 0 10px; text-align: left;}
+dfn {font-style: normal; font-variant: normal; font-weight: normal; color: #434647; cursor: help; border-bottom: 1px dotted #434647;}
+dl {margin: 0 0 18px;}
+dl dt {margin-bottom: 10px;}
+dl dd {}
+.capitalize {text-transform: capitalize;}
+.green {color: #06bd72;}
+.blue {color: #009beb;}
+.red {color: #ff001e;}
+.orange {color: #f99d1c;}
+.black {color: #434647;}
+.grey {color: #a8abac;}
+.lightgrey {color: #a3a3a3;}
+.royalBlue {color: #4169e1;}
+.pale {color: #bee2f3;}
+.agent {display: inline; font-weight: bold; color: #1197d5;}
+.clear {clear: both;}
+.right {text-align: right;}
+.hidden {display: none;}
+th.right span {margin-right: -12px; padding-right: 12px;}
+span.clear {display: block;}
+.hr {background: #ebebeb; height: 1px; width: 100%; overflow: hidden; display: block; margin-bottom: 8px;}
+b, strong {font-weight: bold;}
+
+.referenceColumns {margin-right: -20px; width: 960px; position: relative;}
+.referenceColumns h5 {padding-bottom: 22px; padding-top: 20px;}
+.referenceColumns a.refLink {max-width: 200px; display: inline-block; overflow: hidden; text-overflow: ellipsis; background: url(../img/icons/show.png) -2px 3px no-repeat; padding-left: 14px;}
+
+.referenceColumn {width: 200px; float: left; padding-right: 40px; font-size: 11px; line-height: 14px; padding-top: 8px; padding-bottom: 20px;}
+.referenceColumn p {padding-bottom: 4px; line-height: 14px !important;}
+.referenceColumn .area {padding-left: 14px; font-size: 48px; line-height: normal !important; background: url(../img/icons/area.png) no-repeat scroll 1px 12px transparent;}
+.referenceColumn .traffic {padding-left: 14px; font-size: 48px; line-height: normal !important; background: url(../img/icons/traffic.png) no-repeat scroll 1px 12px transparent;}
+.referenceColumn .timezone {padding-left: 14px; font-size: 48px; line-height: normal !important; background: url(../img/icons/timezone.png) no-repeat scroll 1px 12px transparent;}
+.referenceColumn .population {padding-left: 14px; font-size: 48px; line-height: normal !important; background: url(../img/icons/population.png) no-repeat scroll 1px 12px transparent;}
+
+.airCode {color: #a8abac; padding-left: 10px;}
